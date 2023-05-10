@@ -3,11 +3,13 @@ package logx
 // Adapter interface for logger interoperability
 type Adapter interface {
 	Logger
+	// WithFormatter returned a clone of the adapter and sets given formatter to it
 	WithFormatter(formatter Formatter) Adapter
 }
 
 // Formatter interface for log output formatting
 type Formatter interface {
+	// Format formats log output before it's passed to the wrapped logger
 	Format(message *string, fields map[string]any) any
 }
 
@@ -35,16 +37,28 @@ type LogF interface {
 type Logger interface {
 	Log
 	LogF
+	// Debug sets the log level to LogLevelDebug and log given values to Print()
 	Debug(v ...any)
+	// Debugf sets the log level to LogLevelDebug and log given values to Printf()
 	Debugf(format string, v ...any)
+	// Info sets the log level to LogLevelInfo and log given values to Print()
 	Info(v ...any)
+	// Infof sets the log level to LogLevelInfo and log given values to Printf()
 	Infof(format string, v ...any)
+	// Notice sets the log level to LogLevelNotice and log given values to Print()
 	Notice(v ...any)
+	// Noticef sets the log level to LogLevelNotice and log given values to Printf()
 	Noticef(format string, v ...any)
+	// Warning sets the log level to LogLevelWarning and log given values to Print()
 	Warning(v ...any)
+	// Warningf sets the log level to LogLevelWarning and log given values to Printf()
 	Warningf(format string, v ...any)
+	// Error sets the log level to LogLevelError and log given values to Print()
 	Error(v ...any)
+	// Errorf sets the log level to LogLevelError and log given values to Printf()
 	Errorf(format string, v ...any)
+	// WithField clones the current logger and adds a new field to it
+	WithField(name string, value any) Logger
 }
 
 // log level values
