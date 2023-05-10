@@ -1,0 +1,29 @@
+linters:
+  enable:
+    - gci
+    - bodyclose
+    - errname
+    - errorlint
+    - exportloopref
+    - gochecknoinits
+    - gochecknoglobals
+    - goerr113
+    - goimports
+    - gocyclo
+    - gosec
+    - misspell
+    - nestif
+    - nilnil
+    - nlreturn
+    - nolintlint
+    - prealloc
+    - revive
+    - sqlclosecheck
+    - unconvert
+    - unparam
+    - wastedassign
+    - whitespace
+    - wsl
+    - rowserrcheck
+    - sqlclosecheck
+
