@@ -1,4 +1,4 @@
-# LogX
+# LogX - Contract
 
 Unified logging with Golang
 
@@ -25,3 +25,7 @@ go test ./... -race
 ```shell
 golangci-lint run
 ```
+
+## License
+
+MIT License (see [LICENSE](LICENSE) file)

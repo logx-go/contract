@@ -66,6 +66,6 @@ const (
 	FieldNameCallerFunc   string = "caller:func"
 	FieldNameCallerFile   string = "caller:file"
 	FieldNameCallerLine   string = "caller:line"
-	FieldNameHttpRequest  string = "http:request"
-	FieldNameHttpResponse string = "http:response"
+	FieldNameHTTPRequest  string = "http:request"
+	FieldNameHTTPResponse string = "http:response"
 )
