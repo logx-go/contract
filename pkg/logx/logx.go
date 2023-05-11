@@ -10,7 +10,8 @@ type Adapter interface {
 // Formatter interface for log output formatting
 type Formatter interface {
 	// Format formats log output before it's passed to the wrapped logger
-	Format(message *string, fields map[string]any) any
+	// it returns the formatted message as string and formatted fields untyped
+	Format(message *string, fields map[string]any) (string, []any)
 }
 
 // Log interface for log compliance (https://pkg.go.dev/log)
